@@ -1,9 +1,6 @@
-/**
- * Created by sanjoy on 11/10/15.
- */
-import jsdom from 'jsdom';
+import jsdom from 'node-jsdom';
 import chai from 'chai';
-import chaiImmutable from 'chai-immutable';
+import chaiImmutable from 'chai-immutable'
 
 const doc = jsdom.jsdom('<!doctype html><html><body></body></html>');
 const win = doc.defaultView;
@@ -11,10 +8,9 @@ const win = doc.defaultView;
 global.document = doc;
 global.window = win;
 
-Object.keys(window).forEach((key)=> {
+Object.keys(window).forEach((key) => {
     if (!(key in global)) {
-        global[key] = window[key]
+        global[key] = window[key];
     }
 });
-
 chai.use(chaiImmutable);

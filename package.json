@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.jsx",
   "scripts": {
-    "start":"webpack-dev-server",
+    "start": "webpack-dev-server",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js 'test/**/*.@(js|jsx)'",
     "test:watch": "npm run test -- --watch"
   },
@@ -12,26 +12,30 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "npm": "^3.3.12",
     "babel-core": "^6.1.2",
     "babel-loader": "^6.1.0",
     "babel-preset-es2015": "^6.1.2",
     "babel-preset-react": "^6.1.2",
     "chai": "^3.4.1",
     "chai-immutable": "^1.5.2",
-    "jsdom": "^7.0.2",
     "mocha": "^2.3.3",
+    "node-jsdom": "^3.1.5",
+    "npm": "^3.3.12",
     "react-hot-loader": "^1.3.0",
     "webpack": "^1.12.3",
     "webpack-dev-server": "^1.12.1"
   },
-  "babel": [
-    "es2015",
-    "react"
-  ],
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
   "dependencies": {
     "immutable": "^3.7.5",
     "react": "^0.14.2",
-    "react-dom": "^0.14.2"
+    "react-addons-pure-render-mixin": "^0.14.2",
+    "react-dom": "^0.14.2",
+    "react-router": "^1.0.0-rc3"
   }
 }
