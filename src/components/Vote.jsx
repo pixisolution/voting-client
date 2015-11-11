@@ -24,6 +24,7 @@ export default React.createClass({
                     null}
             </button>
                 )}
+            <button disabled={!this.isDisabled()} onClick={()=>this.props.next()}>Next</button>
         </div>;
     }
 });
